@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Заметки</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Мои Заметки</h1>
+      <div class="controls">
+        <button id="add-note" class="add-button">+ Добавить заметку</button>
+        <input type="text" id="search" placeholder="Поиск заметок..." />
+
+        <div class="filters">
+          <label>Фильтр по важности:</label>
+          <select id="filter-importance">
+            <option value="all">Все важности</option>
+            <option value="high">Высокая важность</option>
+            <option value="medium">Средняя важность</option>
+            <option value="low">Низкая важность</option>
+          </select>
+
+          <div class="status-filters">
+            <label>Фильтр по статусу:</label>
+            <div class="checkbox-group">
+              <label
+                ><input type="checkbox" name="status" value="active" checked />
+                Активные</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="status"
+                  value="completed"
+                  checked
+                />
+                Завершённые</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  name="status"
+                  value="cancelled"
+                  checked
+                />
+                Отменённые</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="sorting">
+          <label>Сортировать по:</label>
+          <select id="sort-by">
+            <option value="importance">Важности</option>
+            <option value="time">Времени создания</option>
+            <option value="status">Статусу</option>
+          </select>
+          <label>Направление:</label>
+          <select id="sort-direction">
+            <option value="asc">По возрастанию</option>
+            <option value="desc">По убыванию</option>
+          </select>
+        </div>
+      </div>
+      <div id="notes-list" class="notes-list"></div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="note-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modal-title">Новая заметка</h2>
+        <textarea
+          id="note-text"
+          placeholder="Введите текст заметки..."
+        ></textarea>
+        <select id="note-importance">
+          <option value="high">Высокая важность</option>
+          <option value="medium">Средняя важность</option>
+          <option value="low">Низкая важность</option>
+        </select>
+        <select id="note-status">
+          <option value="active">Активная</option>
+          <option value="completed">Завершённая</option>
+          <option value="cancelled">Отменённая</option>
+        </select>
+        <div class="modal-buttons">
+          <button id="cancel-note" class="cancel-button">Отмена</button>
+          <button id="save-note" class="save-button">Сохранить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Окно подтверждения удаления -->
+    <div id="confirm-modal" class="modal">
+      <div class="modal-content">
+        <p>Вы уверены, что хотите удалить эту заметку?</p>
+        <div class="confirm-buttons">
+          <button id="confirm-no" class="confirm-button no">Нет</button>
+          <button id="confirm-yes" class="confirm-button yes">Да</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
