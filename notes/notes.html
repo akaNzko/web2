@@ -16,37 +16,25 @@
         <div class="filters">
           <label>Фильтр по важности:</label>
           <select id="filter-importance">
-            <option value="all">Все важности</option>
-            <option value="high">Высокая важность</option>
-            <option value="medium">Средняя важность</option>
-            <option value="low">Низкая важность</option>
+            <option value="0">Все важности</option>
+            <option value="3">Высокая важность</option>
+            <option value="2">Средняя важность</option>
+            <option value="1">Низкая важность</option>
           </select>
 
           <div class="status-filters">
             <label>Фильтр по статусу:</label>
             <div class="checkbox-group">
-              <label
-                ><input type="checkbox" name="status" value="active" checked />
-                Активные</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="status"
-                  value="completed"
-                  checked
-                />
-                Завершённые</label
-              >
-              <label
-                ><input
-                  type="checkbox"
-                  name="status"
-                  value="cancelled"
-                  checked
-                />
-                Отменённые</label
-              >
+              
+              <label for="active">Активные</label>
+              <input type="checkbox" name="status" value="3" checked/>
+
+              <label for="completed">Завершённые</label>
+              <input type="checkbox" name="status" value="2" checked/>
+
+              <label for="cancelled">Отменённые</label>
+              <input type="checkbox" name="status" value="1" checked/>
+              
             </div>
           </div>
         </div>
@@ -78,14 +66,15 @@
           placeholder="Введите текст заметки..."
         ></textarea>
         <select id="note-importance">
-          <option value="high">Высокая важность</option>
-          <option value="medium">Средняя важность</option>
-          <option value="low">Низкая важность</option>
+          <option value="3">Высокая важность</option>
+          <option value="2">Средняя важность</option>
+          <option value="1">Низкая важность</option>
         </select>
+        
         <select id="note-status">
-          <option value="active">Активная</option>
-          <option value="completed">Завершённая</option>
-          <option value="cancelled">Отменённая</option>
+          <option value="3">Активная</option>
+          <option value="2">Завершённая</option>
+          <option value="1">Отменённая</option>
         </select>
         <div class="modal-buttons">
           <button id="cancel-note" class="cancel-button">Отмена</button>
