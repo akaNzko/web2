@@ -132,58 +132,73 @@ h1 {
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.note.high {
-  border-left: 5px solid #ff4d4d;
-}
-
-.note.medium {
-  border-left: 5px solid #ffcc00;
-}
-
-.note.low {
-  border-left: 5px solid #4d94ff;
-}
-
-.note .time {
-  font-size: 0.8em;
-  color: #666;
-  margin-top: 10px;
-}
-
-.note .status {
-  font-size: 0.9em;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.note .status.active {
-  background: #4caf50;
-  color: white;
-}
-
-.note .status.completed {
-  background: #2196f3;
-  color: white;
-}
-
-.note .status.cancelled {
-  background: #ff4d4d;
-  color: white;
-}
-
-.note button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
+.note {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
-}
+  position: relative;
 
-.note button:hover {
-  opacity: 0.8;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &.high {
+    border-left: 5px solid #ff4d4d;
+  }
+
+  &.medium {
+    border-left: 5px solid #ffcc00;
+  }
+
+  &.low {
+    border-left: 5px solid #4d94ff;
+  }
+
+  .time {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  .status {
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+
+    &.active {
+      background: #4caf50;
+      color: white;
+    }
+
+    &.completed {
+      background: #2196f3;
+      color: white;
+    }
+
+    &.cancelled {
+      background: #ff4d4d;
+      color: white;
+    }
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 .modal {
