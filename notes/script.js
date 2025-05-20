@@ -50,7 +50,6 @@ async function loadNotes() {
     renderNotes();
   } catch (error) {
     console.error('Ошибка при загрузке заметок:', error);
-    // Можно добавить уведомление для пользователя
   }
 }
 
